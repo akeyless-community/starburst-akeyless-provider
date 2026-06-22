@@ -6,6 +6,19 @@ Resolves configuration references like `${akeyless:/path/to/secret:jsonKey}` at 
 
 Built on the Airlift `SecretProviderFactory` SPI (same model as SEP's built-in keystore provider).
 
+## Releases
+
+Download versioned plugin bundles from [GitHub Releases](https://github.com/akeyless-community/starburst-akeyless-provider/releases):
+
+```bash
+VERSION=1.0.0
+curl -fsSL -o starburst-akeyless-secrets-provider.zip \
+  "https://github.com/akeyless-community/starburst-akeyless-provider/releases/download/v${VERSION}/starburst-akeyless-secrets-provider-${VERSION}.zip"
+unzip starburst-akeyless-secrets-provider.zip -d /usr/lib/starburst/secrets-plugins/
+```
+
+Or build from source (see below).
+
 ## Build
 
 Requires Java 21+ and Maven 3.9+.
